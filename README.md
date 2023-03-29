@@ -186,7 +186,7 @@ __Notice__: There are two more helpers you can import from np-typeorm-pagination
 
 ## Contributions: 
 If you would like to improve the package, you can submit PRs on the github page.
-[PULL REQUESTS](https://github.com/savannabits/np-typeorm-pagination/pulls)
+[PULL REQUESTS](https://github.com/neopayvn/np-typeorm-pagination/pulls)
 ## Issues
 In case of any issues, please submit them to the issues page of the repo: 
-[ISSUES](https://github.com/savannabits/np-typeorm-pagination/issues)
+[ISSUES](https://github.com/neopayvn/np-typeorm-pagination/issues)
