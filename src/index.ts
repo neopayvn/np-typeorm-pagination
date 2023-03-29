@@ -1,8 +1,6 @@
-import { NextFunction } from 'express';
-import { Response } from 'express';
-import { Request } from 'express';
-import { PaginationAwareObject, paginate } from "./helpers/pagination";
+import { NextFunction, Request, Response } from 'express';
 import { SelectQueryBuilder } from 'typeorm';
+import { paginate, PaginationAwareObject } from "./helpers/pagination";
 declare module "typeorm" {
     export interface SelectQueryBuilder<Entity> {
         paginate(per_page?: number|null): Promise<PaginationAwareObject>;
@@ -20,7 +18,6 @@ export function pagination(req: Request, res: Response, next: NextFunction):void
         else per_page = getPerPage(req, per_page);// If set, check if the request has per_page (which will override), or fallback to the set default
         return await paginate(this,current_page,per_page);
     }
-    //console.log("pagination registered");
     next();
 }
 export function getPerPage(req: Request, defaultPerPage:number = 15) {
